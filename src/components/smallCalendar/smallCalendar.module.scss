@@ -1,0 +1,60 @@
+.smallCalendar {
+  background: white;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.calendarHead {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.dayTitle {
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+
+.month {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  flex: 1;
+  border-left: 1px solid black;
+}
+
+.day {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  background-color: rgb(175, 228, 210);
+  cursor: pointer;
+}
+
+.blurDay {
+  background-color: grey;
+  color: black;
+  opacity: 0.4;
+}
+
+.currentDay {
+  background-color: rgb(136, 174, 245);
+  color: white;
+}
+
+.selectedDay {
+	background-color: blue;
+	color: white;
+}

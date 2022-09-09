@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-bottom: 2px solid grey;
+  padding: 10px;
+  position: relative;
+
+  .date {
+    display: block;
+    width: 170px;
+    text-align: center;
+  }
+
+  .group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .todayBtn {
+    padding: 10px 25px;
+		margin: 0 25px;
+    background: blue;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+		transition: background-color .3s;
+  }
+
+	.todayBtn:hover {
+		background-color: rgb(75, 75, 223);
+	}
+
+	.toggleCalendarBtn {
+		display: flex;
+		font-size: 30px;
+	}
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 320px;
+}

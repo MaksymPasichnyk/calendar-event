@@ -1,0 +1,106 @@
+.layout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(192, 184, 184, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+
+		span {
+			color: grey;
+			font-size: 11px;
+		}
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .input {
+      border-bottom: 1px solid grey;
+      padding: 10px 30px 10px 0;
+
+      &:focus-within {
+        outline: none;
+      }
+
+      &:focus {
+        border-bottom: 1px solid blue;
+      }
+    }
+
+    .textarea {
+      border-bottom: 1px solid grey;
+			padding-bottom: 30px;
+      &:focus-within {
+        outline: none;
+      }
+
+      &:focus {
+        border-bottom: 1px solid blue;
+      }
+    }
+
+    .label {
+      position: relative;
+      color: rgb(172, 169, 169);
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .icon {
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+			flex-direction: column;
+
+      button {
+        padding: 8px;
+        border-radius: 6px;
+        margin: 5px 7px;
+        color: #fff;
+        transition: opacity 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+			.time {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+      .trash {
+        background-color: red;
+      }
+
+      .save {
+        background-color: green;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &Head {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid black;
+  }
+
+  .dayTitle {
+    padding: 10px;
+    border-right: 1px solid grey;
+    font-weight: bold;
+  }
+
+  &Month {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(0, 100%);
+    flex: 1;
+  }
+
+  &Day {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    background-color: rgb(175, 228, 210);
+    cursor: pointer;
+  }
+
+  .currentDay {
+    background-color: rgb(136, 174, 245);
+    color: white;
+  }
+
+  .selectedDay {
+    background-color: rgb(136, 243, 245);
+    color: green;
+  }
+
+  .blurDay {
+    background-color: grey;
+    color: black;
+    opacity: 0.4;
+		cursor: not-allowed;
+  }
+
+  .eventList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+		height: 100%;
+  }
+
+  .eventBadge {
+    font-size: 13px;
+    background-color: green;
+    display: block;
+    width: 100%;
+    text-align: start;
+    padding: 3px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin: 3px 0;
+		word-break: break-all;
+  }
+}
